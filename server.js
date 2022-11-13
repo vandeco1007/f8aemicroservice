@@ -9,6 +9,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 connectDb()
 router(app)
+app.get('/',(req,res,next)=>{
+    res.send('F8bet aemicroservice')
+})
 
 app.listen('3000',function(){
     console.log('Server running at port 5000')
