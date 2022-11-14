@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: false}))
 connectDb()
 router(app)
 app.get('/',(req,res,next)=>{
-    res.send('F8bet aemicroservice')
+    res.send('')
 })
 
 app.listen('3000',function(){

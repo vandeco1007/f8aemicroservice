@@ -4,7 +4,7 @@ const {
 } = require('../controllers/addpoint.controller')
 const router = express.Router()
 
-router.route('/:user')
+router.route('/')
 .post(
     addpoint
 )

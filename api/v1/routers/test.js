@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.route('/')
 .get((req,res,next)=>{
-    res.send('success')
+    res.send('This is the new update')
 })
 
 module.exports = router
