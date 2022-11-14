@@ -1,7 +1,8 @@
 const express = require('express')
 const {
     getAuth,
-    createAuth
+    createAuth,
+    editAuth
 } = require('../controllers/authorization.controller')
 const router = express.Router()
 
@@ -11,6 +12,9 @@ router.route('/')
 )
 .post(
     createAuth
+)
+.patch(
+    editAuth
 )
 
 module.exports = router

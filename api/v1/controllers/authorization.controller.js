@@ -8,7 +8,13 @@ module.exports = {
         let {...body} = req.body
         let create = await authorization.create(body)
         res.json(create)
+    },
+    editAuth: async(req,res,next)=>{
+        let authorize = req.body.authorization
+        let edit = await authorization.findOneAndUpdate({_id:"6370ef1a004c4c3258f9c15f"},{authorization: authorize},{new: true})
+        res.json(edit)
     }
 }
 
 //changed
+//
