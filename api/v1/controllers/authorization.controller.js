@@ -2,7 +2,7 @@ const authorization = require('../models/authorize.model')
 module.exports = {
     getAuth: async(req,res,next)=>{
         let autho = await authorization.findOne().exec()
-        res.json(autho.authorization)
+        res.json(autho)
     },
     createAuth: async(req,res,next)=>{
         let {...body} = req.body

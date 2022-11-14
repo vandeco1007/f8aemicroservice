@@ -8,8 +8,8 @@ module.exports = {
             "manualAdjustments": [
               {
                 "playerid": body.user,
-                "adjustamt": "1",
-                "turnovervalue": "1",
+                "adjustamt": "200",
+                "turnovervalue": "200",
                 "removegwc": false,
                 "servicefee": "0",
                 "adminfeeratio": "0",
