@@ -3,19 +3,18 @@ const autho = require('../middlewares/autholize.middleware')
 module.exports = {
     addpoint: async(req,res,next)=>{
         let {...body} = req.body
-        console.log(body.user)
         var data = {
             "manualAdjustments": [
               {
                 "playerid": body.user,
-                "adjustamt": "1",
-                "turnovervalue": "1",
+                "adjustamt": body.adjusment,
+                "turnovervalue": body.turnover,
                 "removegwc": false,
                 "servicefee": "0",
                 "adminfeeratio": "0",
                 "turnovertype": "0",
-                "ecremarks": "CODE_200K",
-                "remarks": "CODE_200K",
+                "ecremarks": body.ecremarks,
+                "remarks": body.remarks,
                 "reasontype": "2",
                 "manualtype": "1",
                 "walletid": "MAIN"
@@ -24,8 +23,8 @@ module.exports = {
             "sendmessage": true,
             "messages": {
               "msgtype": "2",
-              "subject": "Chúc mức quý khách đã nhận được khuyến mãi từ F8BET.COM",
-              "content": "<p>F8BET trân trọng thông báo quý khách đã nhận được 200 điểm từ khuyến mãi CODE_200K từ F8BET.COM. Chúc Quý khách tham gia may mắn và vui vẻ tại F8BET.COM</p>",
+              "subject": body.subject,
+              "content": "<p>"+body.content+"</p>",
               "players": body.user
             }
           };
@@ -47,11 +46,14 @@ module.exports = {
         axios(config)
         .then(function (response) {
             res.json(
-                response.data
+              {
+                code:200,
+                mes: 'sucesss'
+              }
             );
         })
         .catch(function (error) {
-        console.log(error);
+            res.json(error)
         });
     }
 }

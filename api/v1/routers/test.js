@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.route('/')
 .get((req,res,next)=>{
-    res.send('Reduce point')
+    res.send('New Fields update')
 })
 
 module.exports = router
