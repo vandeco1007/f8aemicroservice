@@ -7,7 +7,7 @@ module.exports = {
             "manualAdjustments": [
               {
                 "playerid": body.user,
-                "adjustamt": body.adjusment,
+                "adjustamt": body.adjustment,
                 "turnovervalue": body.turnover,
                 "removegwc": false,
                 "servicefee": "0",

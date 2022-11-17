@@ -14,6 +14,6 @@ app.get('/',(req,res,next)=>{
 })
 
 app.listen('3000',function(){
-    console.log('Server running at port 5000')
+    console.log('Server running at port 3000')
 })
 
