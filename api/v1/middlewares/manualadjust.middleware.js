@@ -19,6 +19,6 @@ module.exports = async(starttime,endtime,checkValue,playerid,authorization)=>{
         return testcase
     }).then((res)=>{
         console.log(res)
-        return res.includes("KC200") || res.includes("KM200")
+        return res.includes("KC200") || res.includes("FR200") || res.includes(checkValue)
     }).catch(error => console.log("error"));
 }
